@@ -6,7 +6,7 @@ services:
             - "com.eyeseetea.image-name=eyeseetea/dhis2-data:2.32-samaritans"
         volumes:
             - home:/DHIS2_home
-            - /var/lib/portainer/compose/13/config:/config
+            - /var/lib/portainer/compose/14/config:/config
             - data:/data
         environment:
             CATALINA_OPTS: "-Dcontext.path="
