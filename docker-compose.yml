@@ -49,5 +49,8 @@ services:
 
 volumes:
     pgdata:
+        driver: local
     home:
+        driver: local
     data:
+        driver: local
