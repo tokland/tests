@@ -6,7 +6,7 @@ services:
             - "com.eyeseetea.image-name=eyeseetea/dhis2-data:2.32-samaritans"
         volumes:
             - home:/DHIS2_home
-            - /var/lib/portainer/compose/22/config:/config
+            - ./config:/config
             - data:/data
         environment:
             CATALINA_OPTS: "-Dcontext.path="
@@ -35,8 +35,8 @@ services:
         ports:
             - "8090:80"
         volumes:
-            - /var/lib/portainer/compose/22/config/nginx.conf:/etc/nginx/nginx.conf:ro
-            - /var/lib/portainer/compose/22/config/50x.html:/usr/share/nginx/html/50x.html:ro
+            - ./config/nginx.conf:/etc/nginx/nginx.conf:ro
+            - ./config/50x.html:/usr/share/nginx/html/50x.html:ro
             - /var/run/docker.sock:/tmp/docker.sock:ro
         depends_on:
             - "core"
