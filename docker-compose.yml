@@ -9,7 +9,7 @@ services:
             - ./config:/config
             - data:/data
         environment:
-            CATALINA_OPTS: "-Dcontext.path="
+            CATALINA_OPTS: "-Dcontext.path=/dhis2"
             JAVA_OPTS: "-Xmx7500m -Xms4000m"
             LOAD_FROM_DATA: "yes"
         ##entrypoint: sleep 100000
